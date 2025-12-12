@@ -1,0 +1,27 @@
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar */
+.messagesContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background: var(--bdr-secondary);
+  border-radius: var(--border-radius-pill);
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--bdr-primary);
+}

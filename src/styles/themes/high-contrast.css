@@ -1,0 +1,128 @@
+/* High contrast theme */
+[data-theme='high-contrast'] {
+  /* No noise for accessibility */
+  --noise-mask: none;
+  --noise-color: transparent;
+
+  /* Overlay */
+  --bg-overlay: oklch(0.0 0.0 0);
+  --bg-overlay-semi: oklch(0.0 0.0 0 / 0.8);
+
+  /* Legacy rgba values for backwards compatibility */
+  --bdr-inverse: oklch(0.0 0.0 0);
+  --bg-component: oklch(0.7699 0.0001 263.3);
+  --bg-inverse: oklch(0.2742 0.0112 278.1);
+
+  /* Border inverse with opacity variants */
+  --bdr-inverse-full: oklch(0.0 0.0 0);
+  --bdr-inverse-80: oklch(0.0 0.0 0 / 0.8);
+  --bdr-inverse-60: oklch(0.0 0.0 0 / 0.6);
+  --bdr-inverse-40: oklch(0.0 0.0 0 / 0.4);
+  --bdr-inverse-20: oklch(0.0 0.0 0 / 0.2);
+
+  /* Text colors with opacity variants */
+  --fg-text-primary: oklch(0.0 0.0 0);
+  --fg-text-primary-90: oklch(0.0 0.0 0 / 0.9);
+  --fg-text-primary-80: oklch(0.0 0.0 0 / 0.8);
+  --fg-text-primary-60: oklch(0.0 0.0 0 / 0.6);
+  --fg-text-primary-40: oklch(0.0 0.0 0 / 0.4);
+  --fg-text-primary-20: oklch(0.0 0.0 0 / 0.2);
+  --fg-text-primary-10: oklch(0.0 0.0 0 / 0.1);
+
+  --fg-text-secondary: oklch(0.0 0.0 0);
+  --fg-text-secondary-80: oklch(0.0 0.0 0 / 0.8);
+  --fg-text-secondary-60: oklch(0.0 0.0 0 / 0.6);
+  --fg-text-secondary-40: oklch(0.0 0.0 0 / 0.4);
+
+  --fg-text-inverse: oklch(1.0 0.0001 263.3);
+  --fg-text-inverse-90: oklch(1.0 0.0001 263.3 / 0.9);
+  --fg-text-inverse-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --fg-text-inverse-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --fg-text-inverse-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --fg-text-inverse-20: oklch(1.0 0.0001 263.3 / 0.2);
+  --fg-text-inverse-10: oklch(1.0 0.0001 263.3 / 0.1);
+
+  --fg-text-danger: oklch(0.5519 0.187 36.4);
+  --fg-text-danger-80: oklch(0.5519 0.187 36.4 / 0.8);
+  --fg-text-danger-60: oklch(0.5519 0.187 36.4 / 0.6);
+  --fg-text-danger-40: oklch(0.5519 0.187 36.4 / 0.4);
+
+  --fg-text-muted: oklch(0.0 0.0 0);
+  --fg-text-muted-80: oklch(0.0 0.0 0 / 0.8);
+  --fg-text-muted-60: oklch(0.0 0.0 0 / 0.6);
+
+  /* Background - Primary states */
+  --bg-primary-key: oklch(0.0 0.0 0);
+  --bg-primary-default: oklch(0.0 0.0 0);
+  --bg-primary-hover: oklch(0.0 0.0 0);
+  --bg-primary-active: oklch(0.0 0.0 0);
+
+  /* Background - Ghost states (minimal opacity for accessibility) */
+  --bg-ghost-key: oklch(0.0 0.0 0 / 0.01);
+  --bg-ghost-default: oklch(0.0 0.0 0 / 0.01);
+  --bg-ghost-hover: oklch(0.0 0.0 0 / 0.01);
+  --bg-ghost-active: oklch(0.0 0.0 0 / 0.01);
+
+  /* Background colors with opacity variants */
+  --bg-page: oklch(1.0 0.0001 263.3);
+
+  --bg-primary: oklch(0.2742 0.0112 278.1);
+  --bg-primary-90: oklch(0.2742 0.0112 278.1 / 0.9);
+  --bg-primary-80: oklch(0.2742 0.0112 278.1 / 0.8);
+  --bg-primary-60: oklch(0.2742 0.0112 278.1 / 0.6);
+  --bg-primary-40: oklch(0.2742 0.0112 278.1 / 0.4);
+  --bg-primary-20: oklch(0.2742 0.0112 278.1 / 0.2);
+
+  /* Border colors with opacity variants */
+  --bdr-primary: oklch(0.0 0.0 0);
+  --bdr-primary-60: oklch(0.0 0.0 0 / 0.6);
+  --bdr-primary-40: oklch(0.0 0.0 0 / 0.4);
+  --bdr-primary-20: oklch(0.0 0.0 0 / 0.2);
+
+  --bdr-secondary: oklch(0.0 0.0 0);
+  --bdr-secondary-60: oklch(0.0 0.0 0 / 0.6);
+  --bdr-secondary-40: oklch(0.0 0.0 0 / 0.4);
+
+  /* Status colors with opacity variants */
+  --fg-positive: oklch(0.4992 0.1421 133.5);
+  --fg-positive-80: oklch(0.4992 0.1421 133.5 / 0.8);
+  --fg-positive-60: oklch(0.4992 0.1421 133.5 / 0.6);
+
+  --bg-positive: oklch(1.0 0.0001 263.3);
+  --bg-positive-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --bg-positive-60: oklch(1.0 0.0001 263.3 / 0.6);
+
+  /* Border Tokens - High Contrast Theme */
+  --border-neutral: oklch(1.0 0.0001 263.3 / 0.2);
+  --border-hover: oklch(1.0 0.0001 263.3 / 0.5);
+  --border-active: oklch(1.0 0.0001 263.3);
+
+  /* Text Primary Tokens - High Contrast Theme */
+  --text-primary-key: oklch(0.0 0.0 0);
+  --text-primary-default: oklch(0.0 0.0 0);
+  --text-primary-hover: oklch(0.0 0.0 0);
+  --text-primary-active: oklch(0.0 0.0 0);
+  --text-primary-muted: oklch(0.0 0.0 0);
+  --text-primary-disabled: oklch(0.0 0.0 0);
+
+  /* Surface Tokens - High Contrast Theme */
+  --surface-neutral-mask: oklch(1.0 0.0001 263.3);
+  --surface-neutral-reading: oklch(0.0 0.0 0);
+  --surface-neutral-loud: oklch(0.0 0.0 0);
+  --surface-positive-loud: oklch(0.0 0.0 0);
+  --surface-positive-muted: oklch(0.0 0.0 0 / 0.6);
+  --surface-transparent: oklch(1.0 0.0001 263.3 / 0.0);
+
+  /* Legacy variable mappings for backward compatibility */
+  --color-fg-primary: var(--fg-text-primary);
+  --color-fg-secondary: var(--fg-text-secondary);
+  --color-fg-accent: var(--fg-text-danger);
+  --color-bg-primary: var(--bg-page);
+  --color-bg-secondary: var(--bg-component);
+  --color-bg-inverse: var(--fg-text-primary);
+  --color-txt-primary: var(--fg-text-primary);
+  --color-txt-secondary: var(--fg-text-secondary);
+  --color-txt-muted: var(--fg-text-muted);
+  --color-txt-inverse: var(--bg-page);
+  --color-bdr-muted: var(--fg-text-muted);
+}

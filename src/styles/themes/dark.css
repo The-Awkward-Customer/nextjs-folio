@@ -1,0 +1,122 @@
+/* Dark theme */
+[data-theme='dark'] {
+  /* Noise texture - using fg-text for dark theme */
+  --noise-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.67' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' fill='white'/%3E%3C/svg%3E");
+  --noise-color: oklch(1.0 0.0001 263.3 / 0.2);
+
+  /* Overlay */
+  --bg-overlay: oklch(0.2996 0.0108 285.7);
+  --bg-overlay-semi: oklch(0.2996 0.0108 285.7 / 0.8);
+
+  /* Legacy rgba values for backwards compatibility */
+  --bdr-inverse: oklch(1.0 0.0001 263.3);
+  --bg-component: oklch(0.7699 0.0001 263.3);
+  --bg-inverse: oklch(0.2742 0.0112 278.1);
+
+  /* Border inverse with opacity variants */
+  --bdr-inverse-full: oklch(1.0 0.0001 263.3);
+  --bdr-inverse-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --bdr-inverse-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --bdr-inverse-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --bdr-inverse-20: oklch(1.0 0.0001 263.3 / 0.2);
+
+  /* Text colors with opacity variants */
+  --fg-text-primary: oklch(1.0 0.0001 263.3);
+  --fg-text-primary-90: oklch(1.0 0.0001 263.3 / 0.9);
+  --fg-text-primary-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --fg-text-primary-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --fg-text-primary-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --fg-text-primary-20: oklch(1.0 0.0001 263.3 / 0.2);
+  --fg-text-primary-10: oklch(1.0 0.0001 263.3 / 0.1);
+
+  --fg-text-secondary: oklch(0.8282 0.0251 283.2);
+  --fg-text-secondary-80: oklch(0.8282 0.0251 283.2 / 0.8);
+  --fg-text-secondary-60: oklch(0.8282 0.0251 283.2 / 0.6);
+  --fg-text-secondary-40: oklch(0.8282 0.0251 283.2 / 0.4);
+
+  --fg-text-inverse: oklch(0.2996 0.0108 285.7);
+  --fg-text-inverse-90: oklch(0.2996 0.0108 285.7 / 0.9);
+  --fg-text-inverse-80: oklch(0.2996 0.0108 285.7 / 0.8);
+  --fg-text-inverse-60: oklch(0.2996 0.0108 285.7 / 0.6);
+  --fg-text-inverse-40: oklch(0.2996 0.0108 285.7 / 0.4);
+  --fg-text-inverse-20: oklch(0.2996 0.0108 285.7 / 0.2);
+  --fg-text-inverse-10: oklch(0.2996 0.0108 285.7 / 0.1);
+
+  --fg-text-danger: oklch(0.6861 0.2104 41.1);
+  --fg-text-danger-80: oklch(0.6861 0.2104 41.1 / 0.8);
+  --fg-text-danger-60: oklch(0.6861 0.2104 41.1 / 0.6);
+  --fg-text-danger-40: oklch(0.6861 0.2104 41.1 / 0.4);
+
+  --fg-text-muted: oklch(0.8304 0.0278 288.0);
+  --fg-text-muted-80: oklch(0.8304 0.0278 288.0 / 0.8);
+  --fg-text-muted-60: oklch(0.8304 0.0278 288.0 / 0.6);
+
+  /* Background - Primary states */
+  --bg-primary-key: oklch(1.0 0.0001 263.3);
+  --bg-primary-default: oklch(1.0 0.0001 263.3);
+  --bg-primary-hover: oklch(0.8975 0.0001 263.3);
+  --bg-primary-active: oklch(0.8421 0.0001 263.3);
+
+  /* Background - Ghost states (with opacity) */
+  --bg-ghost-key: oklch(1.0 0.0001 263.3 / 0.01);
+  --bg-ghost-default: oklch(1.0 0.0001 263.3 / 0.01);
+  --bg-ghost-hover: oklch(1.0 0.0001 263.3 / 0.05);
+  --bg-ghost-active: oklch(1.0 0.0001 263.3 / 0.1);
+
+  /* Background colors with opacity variants */
+  --bg-page: oklch(24.354% 0.00003 271.152);
+
+  --bg-primary: oklch(1.0 0.0001 263.3);
+  --bg-primary-90: oklch(1.0 0.0001 263.3 / 0.9);
+  --bg-primary-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --bg-primary-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --bg-primary-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --bg-primary-20: oklch(1.0 0.0001 263.3 / 0.2);
+
+  /* Border colors with opacity variants */
+  --bdr-primary: oklch(0.9571 0.0094 286.0);
+  --bdr-primary-60: oklch(0.9571 0.0094 286.0 / 0.6);
+  --bdr-primary-40: oklch(0.9571 0.0094 286.0 / 0.4);
+  --bdr-primary-20: oklch(0.9571 0.0094 286.0 / 0.2);
+
+  --bdr-secondary: oklch(0.4739 0.1608 278.8);
+  --bdr-secondary-60: oklch(0.4739 0.1608 278.8 / 0.6);
+  --bdr-secondary-40: oklch(0.4739 0.1608 278.8 / 0.4);
+
+  /* Status colors with opacity variants */
+  --fg-positive: oklch(0.8957 0.2589 134.4);
+  --fg-positive-80: oklch(0.8957 0.2589 134.4 / 0.8);
+  --fg-positive-60: oklch(0.8957 0.2589 134.4 / 0.6);
+
+  --bg-positive: oklch(0.3977 0.1027 136.8);
+  --bg-positive-80: oklch(0.3977 0.1027 136.8 / 0.8);
+  --bg-positive-60: oklch(0.3977 0.1027 136.8 / 0.6);
+
+  /* Border Tokens - Dark Theme */
+  --border-neutral-default: oklch(0.2766 0.004 264.5);
+  --border-neutral-hover: oklch(0.6305 0.0061 274.8);
+  --border-neutral-active: oklch(1.0 0.0001 263.3);
+
+  /* fg Primary Tokens - Dark Theme */
+  --fg-primary-key: oklch(1.0 0.0001 263.3);
+  --fg-primary-default: oklch(1.0 0.0001 263.3);
+  --fg-primary-hover: oklch(1.0 0.0001 263.3);
+  --fg-primary-active: oklch(1.0 0.0001 263.3);
+  --fg-primary-muted: oklch(0.8141 0.0001 263.3);
+  --fg-primary-disabled: oklch(0.6032 0.0001 263.3);
+
+  /* Surface Tokens - Dark Theme */
+  --surface-neutral-mask: oklch(0.2002 0.0 263.3);
+  --surface-neutral-reading: oklch(0.135 0.0 0.0);
+  --surface-neutral-loud: oklch(0.3653 0.0068 286.0);
+  --surface-positive-loud: oklch(0.9126 0.2425 129.2);
+  --surface-positive-muted: oklch(0.9126 0.2425 129.2 / 0.6);
+  --surface-transparent: oklch(0.2002 0.0 263.3 / 0.0);
+}
+
+/* Feature query for modern color-mix support */
+@supports (color: color-mix(in srgb, #000 50%, transparent)) {
+  [data-theme='dark'] {
+    --noise-color: color-mix(in srgb, var(--fg-text-primary) 20%, transparent);
+  }
+}

@@ -1,0 +1,23 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-main);
+  border-radius: var(--border-radius-pill);
+  white-space: nowrap;
+}
+
+.primary {
+  background-color: transparent;
+  color: var(--fg-text-primary);
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+.inverse {
+  background-color: transparent;
+  color: var(--fg-text-inverse);
+  box-shadow: 0 0 0 1px currentColor;
+}

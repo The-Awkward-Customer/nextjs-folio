@@ -1,0 +1,102 @@
+/* Spacing Design Tokens */
+:root {
+  /* Gap tokens for CSS Grid/Flexbox */
+  --gap-1xs: 2px;
+  --gap-xs: 4px;
+  --gap-sm: 8px;
+  --gap-sm-relaxed: 12px;
+  --gap-md: 16px;
+  --gap-md-relaxed: 20px;
+  --gap-lg: 32px;
+  --gap-xl: 48px;
+
+  /* Fluid gap tokens for responsive spacing */
+  --gap-fluid-half: 0.5rem;
+
+  /* Padding - None */
+  --padding-none: 0;
+  --padding-left-none: 0;
+  --padding-top-none: 0;
+  --padding-right-none: 0;
+  --padding-bottom-none: 0;
+
+  /* Padding - tiny (2) */
+  --padding-tiny: 2px;
+  --padding-left-tiny: var(--padding-tiny);
+  --padding-top-tiny: var(--padding-tiny);
+  --padding-right-tiny: var(--padding-tiny);
+  --padding-bottom-tiny: var(--padding-tiny);
+
+  /* Padding - xs (4) */
+  --padding-xs: 4px;
+  --padding-left-xs: var(--padding-xs);
+  --padding-top-xs: var(--padding-xs);
+  --padding-right-xs: var(--padding-xs);
+  --padding-bottom-xs: var(--padding-xs);
+
+  /* Padding - sm (8px) */
+  --padding-sm: 8px;
+  --padding-left-sm: var(--padding-sm);
+  --padding-top-sm: var(--padding-sm);
+  --padding-right-sm: var(--padding-sm);
+  --padding-bottom-sm: var(--padding-sm);
+
+  /* Padding - sm Relaxed (12px) */
+  --padding-sm-relaxed: 12px;
+  --padding-left-sm-relaxed: var(--padding-sm-relaxed);
+  --padding-top-sm-relaxed: var(--padding-sm-relaxed);
+  --padding-right-sm-relaxed: var(--padding-sm-relaxed);
+  --padding-bottom-sm-relaxed: var(--padding-sm-relaxed);
+
+  /* Padding - md (16px) */
+  --padding-md: 16px;
+  --padding-left-md: var(--padding-md);
+  --padding-top-md: var(--padding-md);
+  --padding-right-md: var(--padding-md);
+  --padding-bottom-md: var(--padding-md);
+
+  /* padding - lg (24px) */
+  --padding-lg: 24px;
+  --padding-left-lg: var(--padding-lg);
+  --padding-top-lg: var(--padding-lg);
+  --padding-right-lg: var(--padding-lg);
+  --padding-bottom-lg: var(--padding-lg);
+
+  /* padding - xl */
+  --padding-xl: 32px;
+  --padding-left-xl: var(--padding-xl);
+  --padding-top-xl: var(--padding-xl);
+  --padding-right-xl: var(--padding-xl);
+  --padding-bottom-xl: var(--padding-xl);
+
+  /* padding - 2xl */
+  --padding-2xl: 43px;
+  --padding-left-2xl: var(--padding-2xl);
+  --padding-top-2xl: var(--padding-2xl);
+  --padding-right-2xl: var(--padding-2xl);
+  --padding-bottom-2xl: var(--padding-2xl);
+
+  /* padding - 3xl */
+  --padding-3xl: 57px;
+  --padding-left-3xl: var(--padding-3xl);
+  --padding-top-3xl: var(--padding-3xl);
+  --padding-right-3xl: var(--padding-3xl);
+  --padding-bottom-3xl: var(--padding-3xl);
+
+  /* padding - 4xl */
+  --padding-4xl: 72px;
+  --padding-left-4xl: var(--padding-4xl);
+  --padding-top-4xl: var(--padding-4xl);
+  --padding-right-4xl: var(--padding-4xl);
+  --padding-bottom-4xl: var(--padding-4xl);
+
+  /* Padding – responsive padding */
+  --padding-fluid-half: 0.5rem;
+  --padding-left-fluid-half: var(--padding-fluid-half);
+  --padding-top-fluid-half: var(--padding-fluid-half);
+  --padding-right-fluid-half: var(--padding-fluid-half);
+  --padding-bottom-fluid-half: var(--padding-fluid-half);
+
+  /* Padding - Page Default (24px) */
+  --padding-page-default: var(--padding-lg);
+}

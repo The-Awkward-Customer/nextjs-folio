@@ -1,74 +1,75 @@
-.container {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.main {
+.pageContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: 600;
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  opacity: 0.3;
 }
 
-.description {
-  color: #666;
-  max-width: 500px;
+/* Override the container height for full viewport animation */
+.backgroundAnimation > div {
+  height: 100vh !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .description {
-    color: #999;
-  }
-}
-
-.links {
+.content {
+  position: relative;
+  z-index: 1;
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding: var(--padding-xl);
 }
 
-.link {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background-color 0.2s;
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-md) 0;
+  width: 100%;
 }
 
-.linkPrimary {
-  background: var(--foreground);
-  color: var(--background);
+.chatTriggerContainer {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.linkPrimary:hover {
-  opacity: 0.9;
-  text-decoration: none;
+.comingSoon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-grow: 1;
+  width: 100%;
 }
 
-.linkSecondary {
-  border: 1px solid #ccc;
+.comingSoon h1 {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 0.9;
+  color: var(--fg-text-primary);
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--font-family-display);
 }
 
-.linkSecondary:hover {
-  background: rgba(0, 0, 0, 0.05);
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .linkSecondary {
-    border-color: #444;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .content {
+    padding: var(--padding-md);
   }
 
-  .linkSecondary:hover {
-    background: rgba(255, 255, 255, 0.05);
+  .topBar {
+    padding: var(--padding-sm) 0;
   }
 }

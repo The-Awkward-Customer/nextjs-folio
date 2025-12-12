@@ -1,0 +1,85 @@
+.inputContainer {
+  padding: var(--padding-md) 0;
+  width: 100%;
+  max-width: 800px;
+}
+
+.inputForm {
+  width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: var(--gap-sm-relaxed);
+  align-items: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--bdr-primary-40);
+  border-radius: var(--border-radius-pill);
+  padding: var(--padding-md) var(--padding-lg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: 2px;
+}
+
+.messageInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg-text-inverse);
+  min-height: 24px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-family: var(--font-family-main);
+}
+
+.messageInput::placeholder {
+  color: var(--fg-text-inverse-60);
+}
+
+.messageInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputHint {
+  padding-top: var(--padding-sm);
+  text-align: center;
+}
+
+.hintText {
+  font-family: var(--font-family-main);
+  font-size: var(--text-sm);
+  color: var(--fg-text-primary-60);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .inputContainer {
+    padding: var(--padding-md);
+    padding-left: max(var(--padding-md), env(safe-area-inset-left));
+    padding-right: max(var(--padding-md), env(safe-area-inset-right));
+    padding-bottom: max(var(--padding-md), env(safe-area-inset-bottom));
+    position: relative;
+    z-index: 10;
+  }
+
+  .inputWrapper {
+    padding: var(--padding-sm) var(--padding-sm-relaxed);
+    min-height: 44px;
+  }
+
+  .messageInput {
+    font-size: max(16px, var(--text-sm));
+  }
+
+  .hintText {
+    font-size: var(--text-xs);
+  }
+}
