@@ -1,0 +1,30 @@
+.promptButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-main);
+  color: var(--fg-text-primary);
+  background-color: transparent;
+  border: 1px solid var(--bdr-secondary);
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.promptButton:hover {
+  background-color: var(--bg-ghost-hover);
+  border-color: var(--bdr-primary);
+}
+
+.promptButton:active {
+  background-color: var(--bg-ghost-active);
+}
+
+.promptButton:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}

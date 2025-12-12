@@ -1,28 +1,25 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
-}
+/* Base styles */
+@import '../styles/base/fonts.css';
+@import '../styles/base/reset.css';
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Design tokens */
+@import '../styles/design-tokens/typography.css';
+@import '../styles/design-tokens/spacing.css';
+@import '../styles/design-tokens/sizing.css';
+@import '../styles/design-tokens/motion.css';
+@import '../styles/design-tokens/radius.css';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Themes */
+@import '../styles/themes/light.css';
+@import '../styles/themes/dark.css';
+@import '../styles/themes/high-contrast.css';
 
+/* Global styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  line-height: 1.5;
+  background: var(--bg-page);
+  color: var(--fg-text-primary);
+  font-family: var(--font-family-main);
+  line-height: var(--leading-normal);
 }
 
 a {

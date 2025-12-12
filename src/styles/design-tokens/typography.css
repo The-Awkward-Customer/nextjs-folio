@@ -1,0 +1,155 @@
+/* Typography Design Tokens */
+:root {
+  /* Font families */
+  --font-family-main: 'Silka', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  --font-family-serif: 'Lora', Georgia, 'Times New Roman', Times, serif;
+
+  /* Text sizes (1.333 ratio) */
+  --text-xs: 0.563rem;      /* 9px */
+  --text-sm: 0.75rem;       /* 12px */
+  --text-base: 1rem;        /* 16px */
+  --text-lg: 1.333rem;      /* 21px */
+  --text-xl: 1.777rem;      /* 28px */
+  --text-2xl: 2.369rem;     /* 38px */
+  --text-3xl: 3.157rem;     /* 51px */
+  --text-4xl: 4.209rem;     /* 67px */
+  --text-5xl: 5.612rem;     /* 90px */
+  --text-6xl: 7.482rem;     /* 120px */
+
+  /* Semantic clamped font sizes (aligned to scale) */
+  --text-xs-clamped: clamp(var(--text-xs), 2vw, var(--text-sm));
+  --text-sm-clamped: clamp(var(--text-sm), 2.5vw, var(--text-base));
+  --text-base-clamped: clamp(var(--text-base), 3vw, var(--text-lg));
+  --text-lg-clamped: clamp(var(--text-lg), 3.5vw, var(--text-xl));
+  --text-xl-clamped: clamp(var(--text-xl), 4vw, var(--text-2xl));
+  --text-2xl-clamped: clamp(var(--text-xl), 5vw, var(--text-3xl));
+  --text-3xl-clamped: clamp(var(--text-2xl), 6vw, var(--text-4xl));
+  --text-4xl-clamped: clamp(var(--text-3xl), 7vw, var(--text-5xl));
+  --text-5xl-clamped: clamp(var(--text-4xl), 8vw, var(--text-6xl));
+
+  /* Font weights */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-super: 900;
+
+  /* Font styles */
+  --font-style-normal: normal;
+
+  /* Leading multipliers */
+  --leading-none: 1;        /* 100% - single line */
+  --leading-tight: 1.2;     /* 120% - dense headings */
+  --leading-snug: 1.333;    /* 133% - comfortable headings */
+  --leading-normal: 1.5;    /* 150% - body text */
+  --leading-relaxed: 1.666; /* 167% - spacious body */
+  --leading-loose: 2;       /* 200% - open spacing */
+
+  /* Negative tracking (for larger text) */
+  --tracking-tighter: -0.03em;   /* Display text (90px+) */
+  --tracking-tight: -0.02em;     /* Headlines (38px-67px) */
+  --tracking-snug: -0.01em;      /* Subheadings (21px-28px) */
+
+  /* Neutral */
+  --tracking-normal: 0;           /* Body text (16px) */
+
+  /* Positive tracking (for smaller text & special cases) */
+  --tracking-loose: 0.01em;       /* Small text (9px-12px) */
+  --tracking-wide: 0.025em;       /* Subtle expansion */
+  --tracking-wider: 0.05em;       /* Noticeable expansion */
+  --tracking-caps: 0.08em;        /* Uppercase text */
+
+  /* Text transform */
+  --text-transform-none: none;
+  --text-transform-uppercase: uppercase;
+  --text-transform-lowercase: lowercase;
+  --text-transform-titlecase: capitalize;
+}
+
+/* Typography utility classes */
+
+/* Headlines & Titles */
+.headline-hero {
+  font-size: var(--text-3xl-clamped);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-tight);
+  font-family: var(--font-family-serif);
+}
+
+.headline-display {
+  font-size: var(--text-2xl-clamped);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-tight);
+  font-family: var(--font-family-serif);
+  text-transform: var(--text-transform-titlecase);
+}
+
+.subtitle-display {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-normal);
+  font-family: var(--font-family-serif);
+  margin-block-start: 0.5em;
+  text-transform: var(--text-transform-titlecase);
+}
+
+.subtitle-utility {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-none);
+  font-family: var(--font-family-main);
+  text-transform: var(--text-transform-titlecase);
+}
+
+/* Body & Prose */
+.text-prose {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-relaxed);
+  font-family: var(--font-family-serif);
+  margin-block-start: 0.5em;
+}
+
+.text-list-small {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-relaxed);
+  font-family: var(--font-family-serif);
+  margin-block-start: 0.5em;
+}
+
+.text-caption {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-none);
+  font-family: var(--font-family-main);
+}
+
+.text-kicker-display {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-none);
+  font-family: var(--font-family-serif);
+  margin-block-start: 0.5em;
+}
+
+/* Actions */
+.text-button-sm {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-none);
+  font-family: var(--font-family-main);
+}
+
+.text-link-sm {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-none);
+  font-family: var(--font-family-main);
+  text-decoration: none;
+}

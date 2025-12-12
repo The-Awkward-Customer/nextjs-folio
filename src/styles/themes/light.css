@@ -1,0 +1,142 @@
+/* Light theme (default) */
+:root,
+[data-theme='light'] {
+  /* Overlay */
+  --bg-overlay: oklch(1.0 0.0001 263.3);
+  --bg-overlay-semi: oklch(1.0 0.0001 263.3 / 0.8);
+
+  /* Legacy rgba values for backwards compatibility */
+  --bdr-inverse: oklch(1.0 0.0001 263.3);
+  --bg-inverse: oklch(1.0 0.0001 263.3);
+
+  /* Border inverse with opacity variants */
+  --bdr-inverse-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --bdr-inverse-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --bdr-inverse-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --bdr-inverse-20: oklch(1.0 0.0001 263.3 / 0.2);
+
+  /* Noise texture mask */
+  --noise-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.67' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' fill='white'/%3E%3C/svg%3E");
+  --noise-color: oklch(0.0 0.0 0 / 0.2);
+
+  /* Text colors with opacity variants */
+  --fg-text-primary: oklch(0.2742 0.0112 278.1);
+  --fg-text-primary-90: oklch(0.2742 0.0112 278.1 / 0.9);
+  --fg-text-primary-80: oklch(0.2742 0.0112 278.1 / 0.8);
+  --fg-text-primary-60: oklch(0.2742 0.0112 278.1 / 0.6);
+  --fg-text-primary-40: oklch(0.2742 0.0112 278.1 / 0.4);
+  --fg-text-primary-20: oklch(0.2742 0.0112 278.1 / 0.2);
+  --fg-text-primary-10: oklch(0.2742 0.0112 278.1 / 0.1);
+
+  --fg-text-secondary: oklch(0.5519 0.0186 281.9);
+  --fg-text-secondary-80: oklch(0.5519 0.0186 281.9 / 0.8);
+  --fg-text-secondary-60: oklch(0.5519 0.0186 281.9 / 0.6);
+  --fg-text-secondary-40: oklch(0.5519 0.0186 281.9 / 0.4);
+
+  --fg-text-inverse: oklch(1.0 0.0001 263.3);
+  --fg-text-inverse-90: oklch(1.0 0.0001 263.3 / 0.9);
+  --fg-text-inverse-80: oklch(1.0 0.0001 263.3 / 0.8);
+  --fg-text-inverse-60: oklch(1.0 0.0001 263.3 / 0.6);
+  --fg-text-inverse-40: oklch(1.0 0.0001 263.3 / 0.4);
+  --fg-text-inverse-20: oklch(1.0 0.0001 263.3 / 0.2);
+  --fg-text-inverse-10: oklch(1.0 0.0001 263.3 / 0.1);
+
+  --fg-text-danger: oklch(0.6543 0.2341 34.2);
+  --fg-text-danger-80: oklch(0.6543 0.2341 34.2 / 0.8);
+  --fg-text-danger-60: oklch(0.6543 0.2341 34.2 / 0.6);
+  --fg-text-danger-40: oklch(0.6543 0.2341 34.2 / 0.4);
+
+  --fg-text-muted: oklch(0.667 0.0206 282.5);
+  --fg-text-muted-80: oklch(0.667 0.0206 282.5 / 0.8);
+  --fg-text-muted-60: oklch(0.667 0.0206 282.5 / 0.6);
+
+  /* Background - Primary states */
+  --bg-primary-key: oklch(0.2742 0.0112 278.1);
+  --bg-primary-default: oklch(0.2742 0.0112 278.1);
+  --bg-primary-hover: oklch(0.2742 0.0112 278.1);
+  --bg-primary-active: oklch(0.2742 0.0112 278.1);
+
+  /* Background - Ghost states (with opacity) */
+  --bg-ghost-key: oklch(0.0 0.0 0 / 0.01);
+  --bg-ghost-default: oklch(0.0 0.0 0 / 0.01);
+  --bg-ghost-hover: oklch(0.0 0.0 0 / 0.05);
+  --bg-ghost-active: oklch(0.0 0.0 0 / 0.1);
+
+  /* Background colors with opacity variants */
+  --bg-page: oklch(1.0 0.0001 263.3);
+
+  --bg-component: oklch(0.7699 0.0001 263.3);
+  --bg-component-80: oklch(0.7699 0.0001 263.3 / 0.8);
+  --bg-component-60: oklch(0.7699 0.0001 263.3 / 0.6);
+  --bg-component-40: oklch(0.7699 0.0001 263.3 / 0.4);
+
+  --bg-primary: oklch(0.2742 0.0112 278.1);
+  --bg-primary-90: oklch(0.2742 0.0112 278.1 / 0.9);
+  --bg-primary-80: oklch(0.2742 0.0112 278.1 / 0.8);
+  --bg-primary-60: oklch(0.2742 0.0112 278.1 / 0.6);
+  --bg-primary-40: oklch(0.2742 0.0112 278.1 / 0.4);
+  --bg-primary-20: oklch(0.2742 0.0112 278.1 / 0.2);
+
+  /* Border colors with opacity variants */
+  --bdr-primary: oklch(0.2742 0.0112 278.1);
+  --bdr-primary-60: oklch(0.2742 0.0112 278.1 / 0.6);
+  --bdr-primary-40: oklch(0.2742 0.0112 278.1 / 0.4);
+  --bdr-primary-20: oklch(0.2742 0.0112 278.1 / 0.2);
+
+  --bdr-secondary: oklch(0.8078 0.0001 263.3);
+  --bdr-secondary-60: oklch(0.8078 0.0001 263.3 / 0.6);
+  --bdr-secondary-40: oklch(0.8078 0.0001 263.3 / 0.4);
+
+  /* Status colors with opacity variants */
+  --fg-positive: oklch(0.3977 0.1027 136.8);
+  --fg-positive-80: oklch(0.3977 0.1027 136.8 / 0.8);
+  --fg-positive-60: oklch(0.3977 0.1027 136.8 / 0.6);
+
+  --bg-positive: oklch(0.8957 0.2589 134.4);
+  --bg-positive-80: oklch(0.8957 0.2589 134.4 / 0.8);
+  --bg-positive-60: oklch(0.8957 0.2589 134.4 / 0.6);
+  --bg-positive-40: oklch(0.8957 0.2589 134.4 / 0.4);
+  --bg-positive-20: oklch(0.8957 0.2589 134.4 / 0.2);
+
+  /* Text Primary Tokens */
+  --text-primary-key: oklch(0.2742 0.0112 278.1);
+  --text-primary-default: oklch(0.2742 0.0112 278.1);
+  --text-primary-hover: oklch(0.2742 0.0112 278.1);
+  --text-primary-active: oklch(0.2742 0.0112 278.1);
+  --text-primary-muted: oklch(0.2742 0.0112 278.1);
+  --text-primary-disabled: oklch(0.2742 0.0112 278.1);
+
+  /* Border Tokens */
+  --border-neutral: oklch(1.0 0.0001 263.3);
+  --border-hover: oklch(1.0 0.0001 263.3);
+  --border-active: oklch(1.0 0.0001 263.3);
+
+  /* Surface Tokens */
+  --surface-neutral-mask: oklch(1.0 0.0001 263.3);
+  --surface-neutral-reading: oklch(0.9242 0.0108 286.0);
+  --surface-neutral-loud: oklch(0.8655 0.0083 286.0);
+  --surface-positive-loud: oklch(0.3977 0.1027 136.8);
+  --surface-positive-muted: oklch(0.3977 0.1027 136.8 / 0.6);
+  --surface-transparent: oklch(1.0 0.0001 263.3 / 0.0);
+
+  /* Legacy variable mappings for backward compatibility */
+  --color-fg-primary: var(--fg-text-primary);
+  --color-fg-secondary: var(--fg-text-secondary);
+  --color-fg-accent: var(--fg-text-danger);
+  --color-bg-primary: var(--bg-page);
+  --color-bg-secondary: var(--bg-component);
+  --color-bg-inverse: var(--fg-text-primary);
+  --color-txt-primary: var(--fg-text-primary);
+  --color-txt-secondary: var(--fg-text-secondary);
+  --color-txt-muted: var(--fg-text-muted);
+  --color-txt-inverse: var(--bg-page);
+  --color-bdr-muted: var(--fg-text-muted);
+}
+
+/* Feature query for modern color-mix support */
+@supports (color: color-mix(in srgb, #000 50%, transparent)) {
+  :root,
+  [data-theme='light'] {
+    --noise-color: color-mix(in srgb, var(--bdr-inverse) 20%, transparent);
+  }
+}

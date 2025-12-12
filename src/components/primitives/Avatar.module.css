@@ -1,0 +1,186 @@
+.avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 4px;
+  box-shadow: inset 0 0 0 1px var(--fg-text-primary);
+  container-type: inline-size;
+  transition: var(--transition-fast);
+  isolation: isolate;
+}
+
+.avatarImage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius-tiny);
+  transition: var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+/* Glitch layers */
+.glitchRed,
+.glitchGreen,
+.glitchBlue {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius-tiny);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.glitchRed {
+  filter: sepia(1) saturate(10) hue-rotate(-60deg) brightness(1.2) contrast(1.5);
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+
+.glitchGreen {
+  filter: sepia(1) saturate(10) hue-rotate(60deg) brightness(1.1) contrast(1.3);
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+.glitchBlue {
+  filter: sepia(1) saturate(10) hue-rotate(180deg) brightness(1.3) contrast(1.4);
+  mix-blend-mode: screen;
+  z-index: 4;
+}
+
+.glitchScanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.05) 2px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+  border-radius: var(--border-radius-sm);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* Loading state animation */
+.glitchActive .glitchRed,
+.glitchActive .glitchGreen,
+.glitchActive .glitchBlue {
+  animation: glitchFlicker 0.5s infinite;
+}
+
+.glitchActive .glitchRed {
+  animation-delay: 0.1s;
+}
+
+.glitchActive .glitchGreen {
+  animation-delay: 0.2s;
+}
+
+.glitchActive .glitchBlue {
+  animation-delay: 0.3s;
+}
+
+@keyframes glitchFlicker {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateX(-2px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  75% {
+    opacity: 0.3;
+    transform: translateX(-1px);
+  }
+}
+
+/* Size variants */
+.avatarXs {
+  width: clamp(24px, 10vw, 80px);
+  aspect-ratio: 4 / 5;
+}
+
+.avatarSm {
+  width: clamp(40px, 15vw, 120px);
+  aspect-ratio: 4 / 5;
+}
+
+.avatarMd {
+  width: clamp(60px, 20vw, 180px);
+  aspect-ratio: 4 / 5;
+}
+
+.avatarLg {
+  width: clamp(80px, 25vw, 240px);
+  aspect-ratio: 4 / 5;
+}
+
+/* Button styles */
+.avatarButton {
+  cursor: pointer;
+}
+
+.avatarButton:hover:not(.glitchActive) .avatarImage {
+  transform: scale(0.98);
+}
+
+.avatarButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.avatarButton:disabled:hover .avatarImage {
+  transform: none;
+}
+
+.avatarButton:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .glitchRed,
+  .glitchGreen,
+  .glitchBlue,
+  .glitchScanlines {
+    display: none !important;
+  }
+
+  .glitchActive .avatarImage {
+    animation: glitchPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes glitchPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}
